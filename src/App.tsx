@@ -39,9 +39,9 @@ const shopHaulUrl = "https://www.shop-haul.com/"
 
 function App() {
   return (
-    <div className="bg-[radial-gradient(circle_at_top,#eef5b8_0%,#f6f6f1_22%,#ece9df_100%)] px-3 py-3 text-[#20242c] sm:min-h-screen sm:px-6 sm:py-4">
-      <main className="mx-auto max-w-[1280px]">
-        <section className="overflow-hidden rounded-[28px] border border-black/8 bg-[#f7f6f2] p-2 shadow-[0_28px_72px_rgba(0,0,0,0.12)] sm:rounded-[34px] sm:p-4 sm:shadow-[0_34px_90px_rgba(0,0,0,0.14)]">
+    <div className="overflow-x-hidden bg-[radial-gradient(circle_at_top,#eef5b8_0%,#f6f6f1_22%,#ece9df_100%)] px-3 py-3 text-[#20242c] sm:min-h-screen sm:px-6 sm:py-4">
+      <main className="mx-auto flex max-w-[1280px] sm:min-h-[calc(100vh-2rem)] sm:items-center sm:justify-center">
+        <section className="w-full overflow-hidden rounded-[28px] border border-black/8 bg-[#f7f6f2] p-2 shadow-[0_28px_72px_rgba(0,0,0,0.12)] sm:rounded-[34px] sm:p-4 sm:shadow-[0_34px_90px_rgba(0,0,0,0.14)]">
           <div className="grid overflow-hidden rounded-[28px] border border-black/8 bg-white lg:min-h-[680px] lg:grid-cols-[1.05fr_0.95fr]">
             <div className="flex flex-col justify-between px-4 py-4 sm:px-8 sm:py-7 lg:px-12 lg:py-10">
               <div>
@@ -111,8 +111,8 @@ function App() {
                 <p className="text-[13px] text-[#9aa0aa] max-lg:text-center">
                   Works while browsing
                 </p>
-                <div className="mt-3 overflow-x-auto pb-1 max-lg:[scrollbar-width:none]">
-                  <div className="flex min-w-max flex-nowrap items-center gap-2.5 pr-2 max-lg:mx-auto max-lg:w-max sm:min-w-0 sm:gap-5">
+                <div className="mt-3">
+                  <div className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2 sm:flex-nowrap sm:justify-start sm:gap-5">
                     {brands.map((brand) => (
                       <div
                         key={brand.name}
@@ -127,6 +127,9 @@ function App() {
                     ))}
                   </div>
                 </div>
+                <p className="mt-3 text-[12px] leading-5 text-[#a1a7b1] max-lg:text-center">
+                  And across other stores, too.
+                </p>
               </div>
             </div>
 
